@@ -2,8 +2,11 @@ import streamlit as st
 import pickle
 
 #load the model and scaler
-model = pickle.load(open('student_model.pkl', 'rb'))
-scaler = pickle.load(open('scaler.pkl', 'rb'))
+with open('model.pkl', 'rb') as model_file:
+    model = pickle.load(model_file)
+
+with open('scaler.pkl', 'rb') as scaler_file:
+    scaler = pickle.load(scaler_file)    
 
 #streamlit app
 st.title('Student Test Score Prediction')
