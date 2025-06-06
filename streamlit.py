@@ -1,5 +1,8 @@
 import streamlit as st
+# install joblib if not already installed
+
 import joblib
+
 
 #load the model and scaler
 model = joblib.load('model.pkl')
