@@ -2,7 +2,7 @@ import streamlit as st
 import pickle
 
 #load the model and scaler
-with open('model.pkl', 'rb') as model_file:
+with open('linear_regression_model.pkl', 'rb') as model_file:
     model = pickle.load(model_file)
 
 with open('scaler.pkl', 'rb') as scaler_file:
